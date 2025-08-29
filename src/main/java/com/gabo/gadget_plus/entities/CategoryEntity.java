@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.hibernate.annotations.ManyToAny;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -42,5 +44,6 @@ public class CategoryEntity {
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
     @ToString.Exclude
+    @JsonIgnore //Json ignore para evitar la recursividad infinita
     private List<ProductCatalogEntity> productsCatalog;
 }
