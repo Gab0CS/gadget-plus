@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BillDTO {
     private String id;
-    private String clientRFC;
+    private String rfc;
     private BigDecimal amount;
     @JsonIgnore
     private OrderDTO order;
