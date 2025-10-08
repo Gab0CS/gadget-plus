@@ -49,7 +49,7 @@ public class OrderEntity {
     fetch = FetchType.EAGER, 
     cascade = CascadeType.ALL, 
     orphanRemoval = true)
-    private List<ProductEntity> products = new ArrayList<>();
+    private final List<ProductEntity> products = new ArrayList<>();
 
     @Override
     public boolean equals(Object o){
